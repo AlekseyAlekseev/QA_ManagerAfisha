@@ -29,10 +29,10 @@ public class FilmManager {
     }
 
     public Film[] getAll() {
-        if (films.length != 10 && films.length <= 10) {
+        if (films.length <= getResultLengthFilms()) {
             resultLengthFilms = films.length;
         } else {
-            resultLengthFilms = 10;
+            resultLengthFilms = getResultLengthFilms();
         }
         Film[] result = new Film[resultLengthFilms];
         for (int i = 0; i < result.length; i++) {
